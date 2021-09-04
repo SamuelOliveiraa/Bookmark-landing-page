@@ -12,7 +12,10 @@ img{
     width: 100px;
 }
 h2{
-    font-size: 2rem;
+    font-size: 1.7rem;
+}
+a{
+    color: black;
 }
 p{
     width: 100%;
@@ -20,7 +23,7 @@ p{
 }
 /* BODY */
 body, html{
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     font-family: 'Rubik', sans-serif;
 }
 /* VARIABLES */
@@ -55,7 +58,7 @@ body, html{
 }
 .header img{
     width: 160px;
-    height: 30px;
+    height: 25px;
 }
 .header ul{
     display: none;
@@ -96,54 +99,6 @@ body, html{
     transform: rotate(132deg);
     top: 48%;
 }
-/* ROSE ICON */
-.header .text-nav .icon-text h2 .icon-container .rose-icon{
-    display: block;
-    position: absolute;
-    width: 10px;
-    height: 2px;
-    background-color: var(--very-light-red);
-    color: var(--very-light-red);
-    transform: rotate(45deg);
-    border-radius: 0.5rem;
-    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.25s;
-}
-.header .text-nav .icon-text #tit1.show .icon-container  .rose-icon{
-    transform: rotate(-45deg);
-}
-.header .text-nav .icon-text #tit1.show .icon-container  .rose-icon2{
-    transform: rotate(45deg);
-    left: 18%;
-}
-
-.header .text-nav .icon-text #tit2.show2 .icon-container  .rose-icon{
-    transform: rotate(-45deg);
-}
-.header .text-nav .icon-text #tit2.show2 .icon-container  .rose-icon2{
-    transform: rotate(45deg);
-    left: 18%;
-}
-
-.header .text-nav .icon-text #tit3.show3 .icon-container .rose-icon{
-    transform: rotate(-45deg);
-}
-.header .text-nav .icon-text #tit3.show3 .icon-container .rose-icon2{
-    transform: rotate(45deg);
-    left: 18%;
-}
-
-.header .text-nav .icon-text h2 .icon-container .rose-icon2{
-    display: block;
-    position: absolute;
-    width: 10px;
-    height: 2px;
-    background-color: var(--very-light-red);
-    color: var(--very-light-red);
-    transform: rotate(-45deg);
-    border-radius: 0.5rem;
-    left: 19%;
-    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.25s;
-}
 
 /* MANAGER */
 .manager{
@@ -151,8 +106,8 @@ body, html{
 }
 .manager .img-container{
     width: 80%;
-    max-width: 600px;
-    height: 300px;
+    max-width: 450px;
+    height: 230px;
     background-color: var(--soft-blue);
     margin-left: auto;
     border-radius: 15rem 0 0 15rem;
@@ -160,13 +115,15 @@ body, html{
 }
 .manager .img-container img{
     width: 100%;
-    min-width: 470px;
+    min-width: 370px;
     max-width: 550px;
     position: absolute;
-    top: -19%;
+    top: -12%;
     left: -26%;
 }
 .manager .text{
+    max-width: 500px;
+    margin: 0 auto;
     margin-top: 4rem;
     text-align: center;
     padding: 0 2.5rem;
@@ -211,8 +168,8 @@ body, html{
 }
 .features .info .img-container{
     width: 80%;
-    max-width: 600px;
-    height: 300px;
+    max-width: 450px;
+    height: 230px;
     background-color: var(--soft-blue);
     margin-right: auto;
     border-radius: 0 15rem 15rem 0;
@@ -220,14 +177,15 @@ body, html{
 }
 .features .info .img-container img{
     width: 100%;
-    min-width: 450px;
+    min-width: 370px;
     max-width: 550px;
     position: absolute;
     top: -16%;
-    left: 15%;
+    right: -15%;
 }
 .features .info .text-2{
-    margin: 3rem 0;
+    max-width: 500px;
+    margin: 2rem auto;
     margin-bottom: 7rem;
     text-align: center;
     padding: 0 4rem;
@@ -241,16 +199,21 @@ body, html{
     text-align: center;
 }
 .download .text{
-    padding: 0 3rem;
+    max-width: 550px;
+    padding: 0 1rem;
+    margin: 0 auto;
     margin-bottom: 3rem;
 }
 .download .text p{
     margin: 1rem 0;
 }
+.download .cards{
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-items: center;
+    gap: 3rem;
+}
 .download .cards .card{
     max-width: 250px;
-    margin: 0 auto;
-    margin-bottom: 3rem;
     padding: 3rem 0;
     padding-bottom: 1rem;
     border-radius: 0.4rem;
@@ -267,6 +230,11 @@ body, html{
 }
 
 /* ASKS */
+.asks{
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 7rem;
+}
 .asks .text{
     text-align: center;
     padding: 0 2rem;
@@ -274,6 +242,9 @@ body, html{
 }
 .asks .questions{
     padding: 0 3rem;
+}
+.asks .questions .ask-text{
+    margin: 2rem 0;
 }
 .asks .questions .ask-text h2{
     font-size: 1rem;
@@ -284,12 +255,220 @@ body, html{
     content: "";
     position: absolute;
     width: 100%;
-    height: 4px;
-    color: var(--grayish-blue);
-    top: 0;
-
+    height: 1px;
+    background: var(--grayish-blue);
+    bottom: -15px;
 }
 .asks .questions .ask-text p{
     display: none;
 }
+/* ROSE ICON */
+.asks .questions .ask-text h2 .icon-container{
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.asks .questions .ask-text h2 .icon-container .icon{
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: var(--soft-blue);
+    color: var(--soft-blue);
+    transform: rotate(45deg);
+    border-radius: 0.5rem;
+    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.25s;
+}
+.asks .questions .ask-text h2 .icon-container .rose-icon2{
+    transform: rotate(-45deg);
+    left: 19%;
+}
+.asks .questions .ask-text #tit1.show .icon-container  .rose-icon{
+    transform: rotate(-45deg);
+}
+.asks .questions .ask-text #tit1.show .icon-container  .rose-icon2{
+    transform: rotate(45deg);
+    left: 18%;
+}
 
+.asks .questions .ask-text #tit2.show2 .icon-container  .rose-icon{
+    transform: rotate(-45deg);
+}
+.asks .questions .ask-text #tit2.show2 .icon-container  .rose-icon2{
+    transform: rotate(45deg);
+    left: 18%;
+}
+
+.asks .questions .ask-text #tit3.show3 .icon-container .rose-icon{
+    transform: rotate(-45deg);
+}
+.asks .questions .ask-text #tit3.show3 .icon-container .rose-icon2{
+    transform: rotate(45deg);
+    left: 18%;
+}
+.asks .questions .button{
+    margin: 0 auto;
+    width: 100px;
+    text-align: center;
+}
+
+/* CONTACT */
+.contact{
+    background: var(--soft-blue);
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: -2;
+}
+.contact .container{
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 4rem 3rem;
+}
+.contact strong{
+    display: block;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+.contact h2{
+    font-size: 1.5rem;
+}
+.contact .error{
+    display: none;
+    width: 78.5%;
+    height: 75px;
+    background: var(--soft-red);
+    margin-top: 2rem;
+    border-radius: 0.4rem;
+    position: absolute;
+    z-index: -1;
+    top: 37%;
+    left: 11%;
+}
+.contact input{
+    margin-top: 1.3rem;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 0;
+    border-radius: 0.4rem;
+}
+.contact .error p{
+    color: white;
+    width: 100%;
+    background: var(--soft-red);
+    text-align: left;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 3rem;
+}
+.contact #img-error{
+    display: none;
+    width: 20px;
+    position: absolute;
+    top: 49%;
+    right: 15%;
+    z-index: 1;
+}
+.contact .button{
+    width: 100%;
+    background: var(--soft-red);
+    margin-top: 1rem;
+}
+
+/* FOOTER */
+.footer{
+    background: var(--very-dark-blue);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+.footer #logo{
+    width: 150px;
+    margin-bottom: 1rem;
+}
+.footer ul li + li{
+    margin-top: 1rem;
+}
+.footer .icon-container{
+    margin-top: 2rem;
+}
+.footer .icon-container img{
+    width: 25px;
+}
+.footer .icon-container img + img{
+    margin-left: 1.5rem;
+}
+
+/* MEDIA-QUERIES */
+@media  screen and (min-width: 470px) {
+    .manager .img-container {
+        height: 300px;
+    }
+    .manager .img-container img{
+        min-width: 480px;
+        max-width: 550px;
+    }
+    .features .info .img-container{
+        height: 300px;
+    }
+    .features .info .img-container img{
+        min-width: 450px;
+        max-width: 550px;
+    }
+}
+@media screen and (min-width: 488px){
+    
+    .download .cards .card3{
+        grid-column: 1 / 3;
+    }
+}
+@media screen and (min-width: 756px){
+    
+    .download .cards .card3{
+        grid-column: auto;
+    }
+}
+@media screen and (min-width: 700px){
+    .header{
+        padding-right: 2rem;
+    }
+    .header .icon{
+        display: none;
+    }
+    .header ul{
+        display: flex;
+        height: 30px;
+        align-items: center;
+    }
+    .header ul li{
+        display: inline-block;
+        margin-left: 2rem;
+        line-height: -3px;
+    }
+    .header ul .button{
+        width: 100%;
+        background: var(--soft-red);
+        text-align: center;
+        padding: 0.6rem 1.7rem;
+        margin-top: -2px;
+    }
+
+    .manager{
+        grid-template-areas: 
+        "text img"
+        "text img";
+    }
+
+    .manager .text{
+        grid-area: text;
+    }
+    .manager .img-container{
+        grid-area: img;
+    }
+}

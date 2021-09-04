@@ -50,7 +50,7 @@
         </ul>
     </header>
 
-    <section class="manager">
+    <section class="manager grid">
         <div class="img-container">
             <img src="Assets/images/illustration-hero.svg" alt="Hero">
         </div>
@@ -128,7 +128,7 @@
             </p>
         </div>
 
-        <div class="cards">
+        <div class="cards grid">
             <div class="card card1">
                 <img src="Assets/images/logo-chrome.svg" alt="Chrome logo">
 
@@ -203,8 +203,8 @@
                     What is Bookmark?
 
                     <div class="icon-container">
-                        <span class="rose-icon"></span>
-                        <span class="rose-icon2"></span>
+                        <span class="rose-icon icon"></span>
+                        <span class="rose-icon2 icon"></span>
                     </div>
                 
                 </h2>
@@ -220,8 +220,8 @@
                     How can I request a new browser?
 
                     <div class="icon-container" >
-                        <span class="rose-icon"></span>
-                        <span class="rose-icon2"></span>
+                        <span class="rose-icon icon"></span>
+                        <span class="rose-icon2 icon"></span>
                     </div>
                 </h2>
 
@@ -238,8 +238,8 @@
                     Is there a mobile app?
 
                     <div class="icon-container">
-                        <span class="rose-icon"></span>
-                        <span class="rose-icon2"></span>
+                        <span class="rose-icon icon"></span>
+                        <span class="rose-icon2 icon"></span>
                     </div>
                 </h2>
 
@@ -255,8 +255,8 @@
                     What about other Chromium browsers?
 
                     <div class="icon-container">
-                        <span class="rose-icon"></span>
-                        <span class="rose-icon2"></span>
+                        <span class="rose-icon icon"></span>
+                        <span class="rose-icon2 icon"></span>
                     </div>
                 
                 </h2>
@@ -274,25 +274,29 @@
     </section>
 
     <section class="contact" id="contact">
-        <strong>
-            35,000+ already joined
-        </strong>
-
-        <h2>
-            Stay up-to-date with what we’re doing
-        </h2>
-
-        <input type="email" name="email" id="email">
-
-        <img src="Assets/images/icon-error.svg" alt="icon error">
-
-        <div class="button">
-            Contact Us
+        <div class="container">
+            <strong>
+                35,000+ already joined
+            </strong>
+            <h2>
+                Stay up-to-date with what we’re doing
+            </h2>
+            
+            <input type="email" name="email" id="email" placeholder="Enter your email address">
+            <img src="Assets/images/icon-error.svg" alt="icon error" id="img-error">
+            <div class="error">
+                <p>
+                    Whoops, make sure it´s an email
+                </p>
+            </div>
+            <div class="button">
+                Contact Us
+            </div>
         </div>
     </section>
 
     <footer class="footer">
-        <img src="Assets/images/logo-bookmark.svg" alt="logo-bookmark">
+        <img src="Assets/images/logo-bookmark-footer.svg" alt="logo-bookmark" id="logo">
 
         <ul>
             <li>

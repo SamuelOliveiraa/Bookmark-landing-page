@@ -515,9 +515,6 @@ body, html{
     margin-left: 1.5rem;
 }
 
-
-
-
 /* MEDIA-QUERIES */
 @media  screen and (min-width: 470px) {
     .manager .img-container {
@@ -720,7 +717,6 @@ body, html{
     }
     .contact p{
         width: 254px;
-        display: block;
         margin: 0;
         position: absolute;
         top: 170px;

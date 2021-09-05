@@ -95,22 +95,66 @@ $(document).ready(function () {
             imgerror.style.display = 'none'
         }
     })
-
-
     var btn = document.querySelector('#btn')
     btn.addEventListener('click', function() {
         if(email.value == ""){
             msgerror.style.display = 'block'
+            msgerror.style.background = 'hsl(0, 94%, 66%)'
             imgerror.style.display = 'block'
         }else if(!email.checkValidity()){
             msgerror.style.display = 'block'
+            msgerror.style.background = 'hsl(0, 94%, 66%)'
             imgerror.style.display = 'block'
         }else{
             msgerror.style.display = 'block'
-            msgerror.style.background = 'hsl(98, 94%, 66%)'
+            msgerror.style.background = 'hsl(98, 66%, 57%)'
             imgerror.style.display = 'none'
         }
+    })
 
+    //ROLAGEM DE SEÇÃO NA PARTE DOS FEATURES
+    $('#select1').click(function() {
+        $('#select1').addClass('click')
+        $('#select2').removeClass('click')
+        $('#select3').removeClass('click')
+
+        
+        $('.img-container').height('300px')
+
+        $('#img-select').attr('src', '/Assets/images/illustration-features-tab-1.svg')
+
+        $('#h2-select').text('Bookmark in one click')
+
+        $('#p-select').text('Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.')
+
+    })
+
+    $('#select2').click(function() {
+        $('#select2').addClass('click')
+        $('#select1').removeClass('click')
+        $('#select3').removeClass('click')
+
+        $('.img-container').height('350px')
+
+        $('#img-select').attr('src', '/Assets/images/illustration-features-tab-2.svg')
+
+        $('#h2-select').text('Intelligent search')
+
+        $('#p-select').text('Our powerful search feature will help you find saved sites in no time at all.No need to trawl through all of your bookmarks.')
+    })
+
+    $('#select3').click(function() {
+        $('#select3').addClass('click')
+        $('#select2').removeClass('click')
+        $('#select1').removeClass('click')
+        
+        $('.img-container').height('350px')
+
+        $('#img-select').attr('src', '/Assets/images/illustration-features-tab-3.svg')
+
+        $('#h2-select').text('Share your bookmarks')
+
+        $('#p-select').text('Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.')
     })
 
     // TIRA E COLOCA A SOMBRA NO MENU

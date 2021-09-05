@@ -121,7 +121,7 @@ $(document).ready(function () {
         
         $('.img-container').height('300px')
 
-        $('#img-select').attr('src', '/Assets/images/illustration-features-tab-1.svg')
+        $('#img-select').attr('src', 'Assets/images/illustration-features-tab-1.svg')
 
         $('#h2-select').text('Bookmark in one click')
 
@@ -136,7 +136,7 @@ $(document).ready(function () {
 
         $('.img-container').height('350px')
 
-        $('#img-select').attr('src', '/Assets/images/illustration-features-tab-2.svg')
+        $('#img-select').attr('src', 'Assets/images/illustration-features-tab-2.svg')
 
         $('#h2-select').text('Intelligent search')
 
@@ -150,7 +150,7 @@ $(document).ready(function () {
         
         $('.img-container').height('350px')
 
-        $('#img-select').attr('src', '/Assets/images/illustration-features-tab-3.svg')
+        $('#img-select').attr('src', 'Assets/images/illustration-features-tab-3.svg')
 
         $('#h2-select').text('Share your bookmarks')
 

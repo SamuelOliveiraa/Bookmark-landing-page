@@ -250,6 +250,7 @@ body, html{
     border-left: none;
     border-right: none;
     position: relative;
+    cursor: pointer;
 }
 .features .text #select1.click::before{
     content: "";

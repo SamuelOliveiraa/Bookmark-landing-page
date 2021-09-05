@@ -21,10 +21,17 @@ p{
     width: 100%;
     color: var(--grayish-blue);
 }
+input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
 /* BODY */
 body, html{
     overflow-x: hidden;
     font-family: 'Rubik', sans-serif;
+    position: relative;
+    z-index: -5;
 }
 /* VARIABLES */
 :root{
@@ -47,8 +54,18 @@ body, html{
     border-radius: 0.4rem;
     padding: 0.8rem;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.185);
+    cursor: pointer;
 }
-
+.button:hover{
+    background-color: white;
+    color: var(--soft-blue);
+    border: 1px solid var(--soft-blue);
+}
+.header ul li .btn-red:hover, .contact .btn-red:hover{
+    background-color: white;
+    color: var(--soft-red);
+    border: 1px solid var(--soft-red);
+}
 /* HEADER */
 .header{
     position: fixed;
@@ -295,7 +312,6 @@ body, html{
     width: 200px;
     margin: 0 auto;
 }
-
 /* ASKS */
 .asks{
     max-width: 500px;
@@ -318,6 +334,10 @@ body, html{
     font-weight: 400;
     position: relative;
 }
+.asks .questions .ask-text h2:hover{
+    color: var(--soft-red);
+    cursor: pointer;
+}
 .asks .questions .ask-text h2::before{
     content: "";
     position: absolute;
@@ -326,8 +346,12 @@ body, html{
     background: var(--grayish-blue);
     bottom: -15px;
 }
+.asks .questions .ask-text h2.show::before{
+    display: none;
+}
 .asks .questions .ask-text p{
     display: none;
+    margin-top: 1.5rem;
 }
 /* ROSE ICON */
 .asks .questions .ask-text h2 .icon-container{
@@ -352,28 +376,14 @@ body, html{
     transform: rotate(-45deg);
     left: 28%;
 }
-.asks .questions .ask-text #tit1.show .icon-container  .rose-icon{
+.asks .questions .ask-text h2.show .icon-container .rose-icon{
     transform: rotate(-45deg);
+    background-color: var(--soft-red);
 }
-.asks .questions .ask-text #tit1.show .icon-container  .rose-icon2{
+.asks .questions .ask-text h2.show .icon-container .rose-icon2{
     transform: rotate(45deg);
-    left: 18%;
-}
-
-.asks .questions .ask-text #tit2.show2 .icon-container  .rose-icon{
-    transform: rotate(-45deg);
-}
-.asks .questions .ask-text #tit2.show2 .icon-container  .rose-icon2{
-    transform: rotate(45deg);
-    left: 18%;
-}
-
-.asks .questions .ask-text #tit3.show3 .icon-container .rose-icon{
-    transform: rotate(-45deg);
-}
-.asks .questions .ask-text #tit3.show3 .icon-container .rose-icon2{
-    transform: rotate(45deg);
-    left: 18%;
+    left: 28%;
+    background-color: var(--soft-red);
 }
 .asks .questions .button{
     margin: 0 auto;
@@ -390,9 +400,12 @@ body, html{
     z-index: -2;
 }
 .contact .container{
+    min-width: 340px;
     max-width: 450px;
     margin: 0 auto;
     padding: 4rem 3rem;
+    position: relative;
+    z-index: -1;
 }
 .contact strong{
     display: block;
@@ -403,44 +416,38 @@ body, html{
 }
 .contact h2{
     font-size: 1.5rem;
-}
-.contact .error{
-    display: none;
-    width: 78.5%;
-    height: 75px;
-    background: var(--soft-red);
-    margin-top: 2rem;
-    border-radius: 0.4rem;
-    position: absolute;
-    z-index: -1;
-    top: 37%;
-    left: 11%;
+    position: relative;
 }
 .contact input{
     margin-top: 1.3rem;
-    width: 100%;
+    width: 99%;
     padding: 0.8rem 1rem;
-    border: 0;
+    border: none;
     border-radius: 0.4rem;
 }
-.contact .error p{
+.contact p{
+    display: none;
     color: white;
-    width: 100%;
+    max-width: 354px;
+    height: 75px;
     background: var(--soft-red);
     text-align: left;
     padding: 0.3rem 0.6rem;
     border-radius: 0.4rem;
     font-size: 0.8rem;
     font-style: italic;
-    margin-top: 3rem;
+    line-height: 7rem;
+    position: relative;
+    top: 45%;
+    z-index: -1;
+    margin-top: -2.75rem;
 }
-.contact #img-error{
+.contact h2 #img-error{
     display: none;
     width: 20px;
     position: absolute;
-    top: 49%;
-    right: 15%;
-    z-index: 1;
+    bottom: -85%;
+    right: 7%;
 }
 .contact .button{
     width: 100%;
@@ -451,13 +458,19 @@ body, html{
 /* FOOTER */
 .footer{
     background: var(--very-dark-blue);
-    color: white;
     text-align: center;
     padding: 2rem 0;
 }
 .footer #logo{
     width: 150px;
     margin-bottom: 1rem;
+}
+.footer ul li a{
+    color: white;
+}
+.footer ul li a:hover{
+    color: var(--soft-red);
+    cursor: pointer;
 }
 .footer ul li + li{
     margin-top: 1rem;
@@ -471,6 +484,9 @@ body, html{
 .footer .icon-container img + img{
     margin-left: 1.5rem;
 }
+
+
+
 
 /* MEDIA-QUERIES */
 @media  screen and (min-width: 470px) {
@@ -627,6 +643,27 @@ body, html{
     .download .cards .card3{
         align-self: end;
         grid-column: auto;
+    }
+    .footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;   
+    }
+    .footer #logo{
+        margin: 0;
+    }
+    .footer ul{
+        height: 19px;
+    }
+    .footer ul li{
+        display: inline-block;
+    }
+    .footer ul li + li{
+        margin: 0;
+        margin-left: 1.2rem;
+    }
+    .footer .icon-container{
+        margin: 0;
     }
 }
 @media screen and (min-width: 1000px){

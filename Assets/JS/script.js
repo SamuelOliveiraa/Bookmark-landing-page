@@ -157,6 +157,21 @@ $(document).ready(function () {
         $('#p-select').text('Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.')
     })
 
+    //HOVER DO BOTÃO FIREFOX E CHROME
+
+    hover($('.firefox'), $('.chrome'))
+    hover($('.chrome'),$('.firefox'))
+
+    function hover(c, f){
+        $(c).hover(function() {
+            $(c).css({'background': 'hsl(231, 69%, 60%)',
+                     'color': 'white'})
+
+            $(f).css({'background-color':'white',
+                    'color': 'hsl(231, 69%, 60%)',
+                    'border': '1px solid hsl(231, 69%, 60%)'})
+        })
+    }
     // TIRA E COLOCA A SOMBRA NO MENU
     const header = document.querySelector('#header')
     const navHeight = header.offsetHeight
@@ -170,7 +185,7 @@ $(document).ready(function () {
     })
 
     /* ROLAGEM SUAVE */
-    $('a[href^="#"]').on('click', function(e) {
+    $('li a[href^="#"]').on('click', function(e) {
         e.preventDefault();
         var id = $(this).attr('href'),
                 targetOffset = $(id).offset().top;

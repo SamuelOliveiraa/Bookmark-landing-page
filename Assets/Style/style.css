@@ -32,6 +32,11 @@ body, html{
     font-family: 'Rubik', sans-serif;
     position: relative;
     z-index: -5;
+    scroll-behavior: smooth;
+}
+   
+:target {
+    scroll-margin-top: .8em;
 }
 /* VARIABLES */
 :root{
@@ -146,6 +151,7 @@ body, html{
     width: 30px;
     height: 15px;
     position: relative;
+    cursor: pointer;
 }
 .header .icon .line{
     display: block;
@@ -711,28 +717,37 @@ body, html{
     .asks{
         margin-top: 7rem;
     }
+    .contact .container2{
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+    }
     .contact input{
         width: 250px;
+        height: 41.6px;
         display: inline-block;
+        margin-top: 0;
         margin-right: 1rem;
     }
     .contact p{
         display: none;
-        width: 254px;
+        width: 257px;
         margin: 0;
         position: absolute;
-        top: 170px;
-        left: 64px;
+        top: 165px;
+        left: 45px;
     }
     .contact h2 #img-error{
         width: 20px;
         position: absolute;
-        right: 45%;
+        bottom: -82%;
+        right: 50%;
     }
     .contact .button{
         width: 150px;
-        height: 41px;
+        height: 42px;
         display: inline-block;
+        margin: 0;
     }
 }
 @media screen and (min-width: 1000px){

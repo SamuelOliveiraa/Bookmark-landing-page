@@ -51,17 +51,77 @@ body, html{
 
 /* HEADER */
 .header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 55px;
+    background-color: white;
+    z-index: 11;
     display: flex;
     justify-content: space-between;
-    padding: 2rem 1.5rem;
-    margin-bottom: 8rem;
+    padding: 1rem;
+}
+.header.scroll{
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
 }
 .header img{
     width: 160px;
     height: 25px;
 }
 .header ul{
-    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(229, 31%, 21%, 0.900);
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.header ul img{
+    width: 150px;
+    align-self: flex-start;
+    margin-bottom: 2.5rem;
+}
+.header ul li{
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 1.3rem;
+    border-top: 0.1px solid hsla(229, 8%, 60%, 0.321);
+    border-bottom: 0.1px solid hsla(229, 8%, 60%, 0.321);
+    padding: 1.4rem;
+}
+.header ul #li4{
+    padding: 0;
+    border: none;
+}
+.header ul li a{
+    color: hsl(240, 16%, 89%);
+    letter-spacing: 0.3rem;
+}
+.header ul li .button{
+    background-color: transparent;
+    border: 1px solid white;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.header ul .icon-container{
+    position: absolute;
+    bottom: 0;
+}
+.header ul  .icon-container img{
+    width: 25px;
+}
+.header ul  .icon-container img + img{
+    margin-left: 1.5rem;
 }
 
 /* linha de navegacao */
@@ -89,6 +149,8 @@ body, html{
     top: 100%;
 }
 .header .icon.close .line1{
+    background-color: white;
+    z-index: 20;
     transform: rotate(45deg);
     top: 48%;
 }
@@ -96,6 +158,8 @@ body, html{
     display: none;
 }
 .header .icon.close .line3{
+    background-color: white;
+    z-index: 20;
     transform: rotate(132deg);
     top: 48%;
 }
@@ -103,6 +167,7 @@ body, html{
 /* MANAGER */
 .manager{
     margin-bottom: 6rem;
+    margin-top: 9rem;
 }
 .manager .img-container{
     width: 80%;
@@ -135,6 +200,7 @@ body, html{
     width: 150px;
     display: inline-block;
     font-size: 0.9rem;
+    text-align: center;
 }
 .manager .text .button + .button{
     margin-left: 1rem;
@@ -284,7 +350,7 @@ body, html{
 }
 .asks .questions .ask-text h2 .icon-container .rose-icon2{
     transform: rotate(-45deg);
-    left: 19%;
+    left: 28%;
 }
 .asks .questions .ask-text #tit1.show .icon-container  .rose-icon{
     transform: rotate(-45deg);
@@ -442,26 +508,46 @@ body, html{
         display: none;
     }
     .header ul{
-        display: flex;
+        position: static;
+        width: 500px;
         height: 30px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
         align-items: center;
+        padding: 0;
+    }
+    .header ul img, .header ul .icon-container{
+        display: none;
     }
     .header ul li{
         display: inline-block;
-        margin-left: 2rem;
+        width: 80px;
+        font-size: 0.8rem;
+        border: none;
+        padding: 0;
+        margin-left: 1.3rem;
         line-height: -3px;
     }
-    .header ul .button{
+    .header ul li a{
+        color: black;
+        letter-spacing: inherit;
+    }
+    .header ul li .button{
         width: 100%;
-        background: var(--soft-red);
+        background-color: var(--soft-red);
         text-align: center;
-        padding: 0.6rem 1.7rem;
+        padding: 0.6rem 1rem;
+        margin: 0;
         margin-top: -2px;
+        border: none;
+        font-size: 1rem;
     }
 
     .manager{
         max-width: 1000px;
         margin: 0 auto;
+        margin-top: 11rem;
         grid-template-areas: 
         "text img";
         grid-template-columns: 400px 1fr;

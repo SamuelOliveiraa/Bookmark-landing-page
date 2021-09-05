@@ -9,12 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     
     <!-- STYLE -->
     <link rel="stylesheet" href="Assets/Style/style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <img src="Assets/images/logo-bookmark.svg" alt="Logo Bookmark">
 
         <nav class="icon"> 
@@ -23,30 +26,43 @@
             <span class="line line3"></span>
         </nav>
 
-        <ul>
+        <ul id="nav">
+            <img src="Assets/images/logo-bookmark-footer.svg" alt="">
             <li>
-                <a href="#">
-                    Features
+                <a href="#features">
+                    FEATURES
                 </a>
             </li>
             
             <li>
-                <a href="#">
-                    Pricing
+                <a href="#download">
+                    DOWNLOAD
                 </a>
             </li>
             
             <li>
-                <a href="#">
-                    Contact
+                <a href="#asks">
+                    QUESTIONS
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    CONTACT
                 </a>
             </li>
             
-            <li>
+            <li id="li4">
                 <div class="button">
                     Login
                 </div>
             </li>
+
+            <div class="icon-container">
+                <img src="Assets/images/icon-facebook.svg" alt="Facebook Icon">
+    
+                <img src="Assets/images/icon-twitter.svg" alt="Twitter Icon">
+            </div>
         </ul>
     </header>
 
@@ -65,17 +81,21 @@
                 browser tab and see your sites load instantly. Try it for free.
             </p>
 
-            <div class="button">
-                Get it on Chrome
-            </div>
+            <a href="#download">
+                <div class="button">
+                    Get it on Chrome
+                </div>
+            </a>
 
-            <div class="button firefox">
-                Get it on Firefox
-            </div>
+            <a href="#download">
+                <div class="button firefox">
+                    Get it on Firefox
+                </div>
+            </a>
         </div>
     </section>
 
-    <section class="features">
+    <section class="features" id="features">
         <div class="text">
             <h2>
                 Features
@@ -117,7 +137,7 @@
         </div>
     </section>
 
-    <section class="download">
+    <section class="download" id="download">
         <div class="text">
             <h2>
                 Download the extension
@@ -185,7 +205,7 @@
         </div>
     </section>
 
-    <section class="asks">
+    <section class="asks" id="asks">
         <div class="text">
             <h2>
                 Frequently Asked Questions
@@ -318,5 +338,7 @@
             <img src="Assets/images/icon-twitter.svg" alt="Twitter Icon">
         </div>
     </footer>
+
+    <script src="Assets/JS/script.js"></script>
 </body>
 </html>

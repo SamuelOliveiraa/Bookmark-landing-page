@@ -1,4 +1,4 @@
-# Frontend Mentor - Bookmark Landing Page [Click Here]()
+# Frontend Mentor - Bookmark Landing Page ([Click Here](https://samueloliveiraa.github.io/Bookmark-landing-page/))
 
 ![Design preview for the Fylo dark theme landing page challenge](./Assets/design/desktop-preview.jpg)
 
@@ -20,8 +20,9 @@ In this challenge my biggest difficulty was to implement the smooth scrolling of
 * Jquery
 * Media-queries
 * CSS Grid Layout
+* Flexbox
 * Responsive Website
 
 ## Access My Resolution 💻
 
-   I hosted this challenge with the help of GitHub Pages, to access my resolution of this challenge [Click Here](https://samueloliveiraa.github.io/fylo-dark-theme-landing-page-master/)
+   I hosted this challenge with the help of GitHub Pages, to access my resolution of this challenge [Click Here](https://samueloliveiraa.github.io/Bookmark-landing-page/)

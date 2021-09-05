@@ -716,6 +716,7 @@ body, html{
         margin-right: 1rem;
     }
     .contact p{
+        display: none;
         width: 254px;
         margin: 0;
         position: absolute;

@@ -172,6 +172,7 @@ $(document).ready(function () {
                     'border': '1px solid hsl(231, 69%, 60%)'})
         })
     }
+
     // TIRA E COLOCA A SOMBRA NO MENU
     const header = document.querySelector('#header')
     const navHeight = header.offsetHeight
@@ -196,7 +197,13 @@ $(document).ready(function () {
     });
 })
 
-
+//HOVER DO BOTÃO BOX ICONS
+function hover2(e) {
+    $(e).attr('color', 'orange')
+}
+function out2(e) {
+    $(e).attr('color', 'white')
+}
 
 
 

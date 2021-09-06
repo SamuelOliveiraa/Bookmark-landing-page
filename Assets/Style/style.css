@@ -26,6 +26,9 @@ input:focus{
     border: 0 none;
     outline: 0;
 }
+box-icon + box-icon{
+    margin-left: 0.7rem;
+}
 /* BODY */
 body, html{
     overflow-x: hidden;
@@ -166,7 +169,7 @@ body, html{
     top: 0;
 }
 .header .icon .line2{
-    top: 55%;
+    top: 52%;
 }
 .header .icon .line3{
     top: 100%;
@@ -360,6 +363,9 @@ body, html{
     text-align: center;
     padding: 0 2rem;
     margin: 5rem 0;
+}
+.asks .text h2{
+    margin-bottom: 1.3rem;
 }
 .asks .questions{
     padding: 0 3rem;

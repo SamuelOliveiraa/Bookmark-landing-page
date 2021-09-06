@@ -225,8 +225,8 @@ body, html{
     font-size: 0.9rem;
     text-align: center;
 }
-.manager .text .button + .button{
-    margin-left: 1rem;
+.manager .text a{
+    margin-top: 1rem;
 }
 .manager .text .firefox{
     background-color: white;
@@ -265,7 +265,8 @@ body, html{
     height: 5px;
     background: var(--soft-red);
     bottom: -1px;
-    left: 27%;   
+    left: 50%; 
+    transform: translate(-50%, 0);  
 }
 .features .text #select2.click::before{
     content: "";
@@ -274,7 +275,8 @@ body, html{
     height: 5px;
     background: var(--soft-red);
     bottom: -1px;
-    left: 27%;  
+    left: 50%; 
+    transform: translate(-50%, 0);  
 }
 .features .text #select3.click::before{
     content: "";
@@ -283,7 +285,8 @@ body, html{
     height: 5px;
     background: var(--soft-red);
     bottom: -1px;
-    left: 27%;  
+    left: 50%; 
+    transform: translate(-50%, 0);  
 }
 .features .info .img-container{
     width: 80%;
@@ -643,16 +646,19 @@ body, html{
     .features .text #select1.click::before{
         width: 180px;
         left: -20px;
+        transform: translate(0, 0);
         bottom: -26px;
     }
     .features .text #select2.click::before{
         width: 180px;
         left: -20px;
+        transform: translate(0, 0);
         bottom: -26px;
     }
     .features .text #select3.click::before{
         width: 180px;
         left: -20px;
+        transform: translate(0, 0);
         bottom: -26px;
     }
     .features .info{

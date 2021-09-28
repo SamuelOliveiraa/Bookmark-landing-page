@@ -204,8 +204,3 @@ function hover2(e) {
 function out2(e) {
     $(e).attr('color', 'white')
 }
-
-
-
-
-

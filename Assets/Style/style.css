@@ -63,6 +63,7 @@ body, html{
     padding: 0.8rem;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.185);
     cursor: pointer;
+    transition: all .2s;
 }
 .button:hover{
     background-color: white;
@@ -85,6 +86,7 @@ body, html{
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    transition: all .3s;
 }
 .header.scroll{
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
@@ -127,6 +129,10 @@ body, html{
 .header ul li a{
     color: hsl(240, 16%, 89%);
     letter-spacing: 0.3rem;
+    transition: all .2s;
+}
+.header ul li a:hover{
+    color: var(--soft-red);
 }
 .header ul li .button{
     background-color: transparent;
@@ -140,13 +146,19 @@ body, html{
 }
 .header ul .icon-container{
     position: absolute;
-    bottom: 0;
+    bottom: 5%;
 }
-.header ul  .icon-container img{
-    width: 25px;
+.header ul .icon-container i,
+footer .icon-container i{
+    font-size: 40px;
+    margin-left: 1rem;
+    color: white;
+    transition: all .2s;
 }
-.header ul  .icon-container img + img{
-    margin-left: 1.5rem;
+.header ul .icon-container i:hover,
+footer .icon-container i:hover{
+    color: var(--soft-blue);
+    cursor: pointer;
 }
 
 /* linha de navegacao */
@@ -261,26 +273,8 @@ body, html{
     position: relative;
     cursor: pointer;
 }
-.features .text #select1.click::before{
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 5px;
-    background: var(--soft-red);
-    bottom: -1px;
-    left: 50%; 
-    transform: translate(-50%, 0);  
-}
-.features .text #select2.click::before{
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 5px;
-    background: var(--soft-red);
-    bottom: -1px;
-    left: 50%; 
-    transform: translate(-50%, 0);  
-}
+.features .text #select1.click::before,
+.features .text #select2.click::before,
 .features .text #select3.click::before{
     content: "";
     position: absolute;
@@ -289,7 +283,8 @@ body, html{
     background: var(--soft-red);
     bottom: -1px;
     left: 50%; 
-    transform: translate(-50%, 0);  
+    transform: translate(-50%, 0);
+    transition: all .2s;  
 }
 .features .info .img-container{
     width: 80%;
@@ -394,8 +389,12 @@ body, html{
     display: none;
 }
 .asks .questions .ask-text p{
-    display: none;
-    margin-top: 1.5rem;
+    margin-top: 0;
+    height: 0;
+    opacity: 0;
+    position: relative;
+    z-index: -11;
+    transition: all .25s, opacity .1s .01s;
 }
 /* ROSE ICON */
 .asks .questions .ask-text h2 .icon-container{
@@ -513,6 +512,7 @@ body, html{
 }
 .footer ul li a{
     color: white;
+    transition: all .2s;
 }
 .footer ul li a:hover{
     color: var(--soft-red);
